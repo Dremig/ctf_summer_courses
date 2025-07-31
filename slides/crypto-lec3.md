@@ -328,7 +328,7 @@ LWE问题
   - 对于一个$n$维的格$L$，里面都包含了一个非零向量$\vec{v}$满足 $$||\vec{v}||\leq\sqrt{n}det(L)^{1/n}$$
   - $n$代表格的维度即基向量的数量，通常格的维度与基向量的维度一致，这样构造出来的矩阵就是个方阵，从而能够计算格的行列式
 - Gaussian Heuristic
-  - 高斯启发式和Hermite定理类似，都是对格中的最短向量的上界进行约束：$$||\vec{v}||\leq\sqrt{\frac{n}{2\pi e}}det(L)^{1/n}$$
+  - 高斯启发式给出了随机格中最短非零向量长度的一个期望值：$$||\vec{v}_{\text{shortest}}||\approx\sqrt{\frac{n}{2\pi e}}\det(L)^{1/n}$$
 
 <!-- v -->
 <!-- .slide: data-background="crypto-lec3/background.webp" -->
@@ -565,7 +565,7 @@ $$
 - Howgrave-Graham Lemma
   - 假设$F(x_0) \equiv 0 \bmod M$，那么当$||b_F||<\frac{M}{\sqrt{d+1}}$时，有$F(x_0) = 0$
   - 证明：$|F(x_0)| = |\sum_{i=0}^d a_ix_0^i| \leq \sum_{i=0}^d |a_i||x_0|^i \leq \sum_{i=0}^d |a_i|X^i$
-  - 根据柯西不等式有$\sum_{i=1}^nx_i \leq \sqrt{n\sum_{i=1}^nx_i^2} = \sqrt{n}||(x_1,x_2,...,x_n)||$，在这里即$\sum_{i=0}^d |a_i|X^i \leq \sqrt{d+1}||b_F|| \leq \frac{\sqrt{d+1}M}{d+1} = M$
+  - 根据柯西不等式有$\sum_{i=1}^nx_i \leq \sqrt{n\sum_{i=1}^nx_i^2} = \sqrt{n}||(x_1,x_2,...,x_n)||$，在这里即$\sum_{i=0}^d |a_i|X^i \leq \sqrt{d+1}||b_F|| \leq \frac{\sqrt{d+1}M}{\sqrt{d+1}} = M$
   - 因此$-M < F(x_0) < M$，而$F(x_0) \equiv 0 \bmod M$，所以$F(x_0) = 0$
 
 </div>

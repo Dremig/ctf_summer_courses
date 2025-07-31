@@ -647,7 +647,7 @@ Boneh Durfee攻击
 
 - 假设$m^{e_1} \equiv c_1 \bmod n, m^{e_2} \equiv c_2 \bmod n$
   - 若$e_1$和$e_2$互素，则对$e_1$和$e_2$使用扩展欧几里得算法计算出$s_1、s_2$满足$e_1s_1+e_2s_2=1$
-    - 计算$c_1^{s_1} * c_2^{s_2} \equiv m^{e_1 * s_1+e_2 * s_2} \equiv 1 \bmod n$
+    - 计算$c_1^{s_1} * c_2^{s_2} \equiv m^{e_1 * s_1+e_2 * s_2} \equiv m \bmod n$
   - 若$e_1$和$e_2$不互素，则对$e_1$和$e_2$使用扩展欧几里得算法计算出$s_1、s_2$满足$e_1s_1+e_2s_2=gcd(e_1,e_2)$
     - 计算$c_1^{s_1} * c_2^{s_2} \equiv m^{e_1 * s_1+e_2 * s_2} \equiv m^{gcd(e_1,e_2)} \bmod n$
     - 由于通常$gcd(e_1,e_2)$很小，因此可化归为小公钥指数攻击
